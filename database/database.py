@@ -1,7 +1,7 @@
 from config import DB_URI, DB_NAME
 from pymongo import MongoClient
 import urllib.parse
-dbclient = MongoClient("mongodb+srv://rohandeep123:rohandeep123@cluster0.1rlna4r.mongodb.net/?retryWrites=true&w=majority&appName=Clust")
+dbclient = MongoClient("mongodb+srv://rohandeep123:rohandeep123@cluster0.1rlna4r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 database = dbclient[AARU]
 
 user_data = database['users']
