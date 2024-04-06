@@ -1,8 +1,8 @@
-import motor.motor_asyncio
 from config import DB_URI, DB_NAME
-
-dbclient = motor.motor_asyncio.AsyncIOMotorClient(DB_URI)
-database = dbclient[DB_NAME]
+from pymongo import MongoClient
+import urllib.parse
+dbclient = MongoClient("mongodb+srv://rohandeep123:rohandeep123@cluster0.1rlna4r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+database = dbclient[""]
 
 user_data = database['users']
 
