@@ -1,8 +1,3 @@
-#(©)CodeXBotz
-
-
-
-
 import os
 import logging
 from logging.handlers import RotatingFileHandler
@@ -35,7 +30,7 @@ SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "instantlinks.site")
 SHORTLINK_API = os.environ.get("SHORTLINK_API", "b90ab0b14abf1bf82a5d63b30c151ad38fdb9fcc")
 VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
-TUT_VID = os.environ.get("TUT_VID","https://t.me/how_bot_works/10")
+TUT_VID = os.environ.get("TUT_VID","https://t.me/virels_leak_videos/8")
 
 
 #force sub channel id, if you want enable force sub
@@ -44,7 +39,14 @@ FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", ""))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = os.environ.get("START_MESSAGE", """👋 {first}, 
+
+Your Ads token is expired, refresh your token and try again. 
+
+Token Timeout: 24 hour 
+
+What is token? 
+This is an ads token. If you pass 1 ad, you can use the bot for 24 hour after passing the ad.""")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):
@@ -68,7 +70,7 @@ BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(1392566136)
+
 
 LOG_FILE_NAME = "filesharingbot.txt"
 

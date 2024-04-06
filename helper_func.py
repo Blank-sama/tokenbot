@@ -14,8 +14,7 @@ import time
 from datetime import datetime
 from database.database import user_data, db_verify_status, db_update_verify_status
 
-#logger = logging.getLogger(__name__)
-#logger.setLevel(logging.INFO)
+
 
 async def is_subscribed(filter, client, update):
     if not FORCE_SUB_CHANNEL:
@@ -77,7 +76,7 @@ async def get_message_id(client, message):
     elif message.forward_sender_name:
         return 0
     elif message.text:
-        pattern = "https://t.me/(?:c/)?(.*)/(\d+)"
+        pattern = r"https://t.me/(?:c/)?(.*)/(\d+)"
         matches = re.match(pattern,message.text)
         if not matches:
             return 0
