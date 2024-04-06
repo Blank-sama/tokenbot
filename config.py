@@ -1,8 +1,3 @@
-#(©)CodeXBotz
-
-
-
-
 import os
 import logging
 from logging.handlers import RotatingFileHandler
@@ -28,14 +23,14 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "1390131208"))
 PORT = os.environ.get("PORT", "8080")
 
 #Database 
-DB_URI = "mongodb+srv://rjkundra:Kayamkhani@cluster0.s6lvxxs.mongodb.net/?retryWrites=true&w=majority"
+DB_URI = ""
 DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 
-SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "publicearn.com")
-SHORTLINK_API = os.environ.get("SHORTLINK_API","94b534dab774d8e56b0ec890dbb3180f3ffdcb5b")
+SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "")
+SHORTLINK_API = os.environ.get("SHORTLINK_API","")
 VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
-TUT_VID = os.environ.get("TUT_VID","https://t.me/how_bot_works/10")
+TUT_VID = os.environ.get("TUT_VID","https://t.me/virels_leak_videos/8")
 
 
 #force sub channel id, if you want enable force sub
@@ -44,7 +39,14 @@ FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", ""))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = os.environ.get("START_MESSAGE","""<b>👋 Hey {first}, 
+
+Your Ads token is expired, refresh your token and try again. 
+
+Token Timeout: 24 hour 
+
+What is token? 
+This is an ads token. If you pass 1 ad, you can use the bot for 24 hour after passing the ad.</b>""")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):
@@ -68,7 +70,7 @@ BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(1392566136)
+ADMINS.append(5205083498)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
